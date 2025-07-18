@@ -1,0 +1,113 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    45deg,
+    rgb(6, 30, 165),
+    rgb(18, 170, 157),
+    rgb(6, 30, 165),
+    rgb(18, 170, 157)
+  );
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  animation: back 8s linear infinite alternate both;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  width: 70%;
+  height: 70%;
+  background-color: black;
+
+  grid-template-areas: "first second";
+  grid-template-columns: 1fr 1fr; /* Add this to make columns equal */
+  border-radius: 15px;
+}
+.first {
+  grid-area: first;
+  /* background-image: linear-gradient(
+    45deg,
+    rgb(6, 30, 165),
+    rgb(18, 170, 157),
+    rgb(6, 30, 165),
+    rgb(18, 170, 157)
+  ); */
+  background: transparent;
+  border-radius: 15px 0px 0px 15px;
+  position: relative;
+  overflow: hidden;
+  /* remove width: 100% and height: 100% as they're not needed in grid items */
+}
+.second {
+  grid-area: second;
+  background-color: white;
+  border-radius: 0px 15px 15px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.second div,
+p,
+h1 {
+  margin: 10px;
+}
+@keyframes back {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.first video {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: fill;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.flex button {
+  background-color: #4ca3af;
+  border-radius: 15px;
+  width: 100px;
+  height: 50px;
+}
+#par {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+  margin: 15px 0;
+  width: 80%;
+}
+
+#par::before,
+#par::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #d4d4d4;
+  margin: 0 10px;
+}
