@@ -15,6 +15,15 @@ body {
   background-size: 300% 300%;
   animation: back 8s linear infinite alternate both;
 }
+#par1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: transparent;
+  background-clip: text;
+}
+#par2 {
+  font-size: 1.3rem;
+  color: #aaa8a8a8;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -86,11 +95,13 @@ h1 {
   display: flex;
   flex-direction: row;
   gap: 20px;
+  width: 80%; /* Added width */
+  justify-content: space-between; /* Added */
 }
 .flex button {
+  width: 30%; /* Changed from fixed 100px */
   background-color: #4ca3af;
   border-radius: 15px;
-  width: 100px;
   height: 50px;
 }
 #par {
@@ -101,7 +112,7 @@ h1 {
   color: #777;
   font-size: 14px;
   margin: 15px 0;
-  width: 80%;
+  width: 80%; /* Increased from 80% if needed */
 }
 
 #par::before,
@@ -110,4 +121,122 @@ h1 {
   flex: 1;
   border-bottom: 1px solid #d4d4d4;
   margin: 0 10px;
+}
+input {
+  width: 100%;
+  height: 25px;
+  border-radius: 10px;
+}
+
+.strongpassword {
+  width: 100%;
+  height: 3px;
+  border-radius: 15px;
+  border: 0.3px solid #4ca3af;
+  position: relative;
+  background-color: rgba(165, 162, 162, 0.336);
+  /* overflow: hidden; */
+  transition: all 0.3s ease;
+}
+
+#emptypassword,
+#weakpassword,
+#mediumpassword,
+#strongpassword {
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  height: 100%;
+  /* transition: all 0.3s ease; */
+}
+
+#weakpassword {
+  width: 33%;
+  background-color: rgba(255, 0, 0, 1); /* Adjusted opacity */
+}
+
+#mediumpassword {
+  width: 66%;
+  background-color: rgba(255, 187, 0, 1); /* Adjusted opacity */
+}
+
+#strongpassword {
+  width: 100%;
+  background-color: rgba(0, 255, 0, 1); /* Adjusted opacity */
+}
+.cont {
+  width: 80%; /* Increased from 50% */
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  color: #7e7a7a83;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+input:focus {
+  outline: blue;
+  border-color: blue;
+}
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  color: #4ca3af;
+  background: white;
+  padding: 0 3px;
+  font-size: 12px;
+  left: 5px;
+  top: -8px;
+}
+button {
+  width: 80%; /* Increased from 40% */
+  height: 30px;
+  border: transparent;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+button:hover {
+  box-shadow: 0 0 20px #764ba2;
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+#bebe {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%; /* Increased from 50% */
+}
+
+#bebe::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  width: 20px;
+  height: 20px;
+  background-color: #9e9b9b88;
+}
+a {
+  color: #4ca3af;
+  text-decoration: none;
+}
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+#terms {
+  width: auto;
+  height: auto;
+  margin-right: 8px;
+}
+#signup-form {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
 }

@@ -16,14 +16,71 @@
           </video>
         </div>
         <div class="second">
-          <h1>CREATE ACCOUNT</h1>
-          <p>start ur journey with us today</p>
+          <h1 id="par1">CREATE ACCOUNT</h1>
+          <p id="par2">start ur journey with us today</p>
           <div class="flex">
-            <button>google</button>
-            <button>facebook</button>
-            <button>linkedin</button>
+            <button type="button">google</button>
+            <button type="button">facebook</button>
+            <button type="button">linkedin</button>
           </div>
           <p id="par">or sign up with email</p>
+          <form id="signup-form">
+            <div class="cont">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder=" "
+                required
+                minlength="3"
+              />
+              <label for="name">full name</label>
+              <span class="error-message"></span>
+            </div>
+            <div class="cont">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder=" "
+                required
+              />
+              <label for="email">Email</label>
+              <span class="error-message"></span>
+            </div>
+            <div class="cont">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder=" "
+                required
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+              />
+              <label for="password">Password</label>
+              <div class="strongpassword">
+                <div id="emptypassword"></div>
+              </div>
+              <span class="error-message"></span>
+            </div>
+            <div class="cont">
+              <input
+                type="password"
+                name="password2"
+                id="password2"
+                placeholder=" "
+                required
+              />
+              <label for="password2">Password confirmation</label>
+              <span class="error-message"></span>
+            </div>
+            <p id="bebe">
+              I agree to the <a href="#"> Terms & Conditions </a> and
+              <a href="#"> Privacy Policy </a>
+            </p>
+
+            <button type="submit">Create Account</button>
+          </form>
         </div>
       </div>
     </div>
