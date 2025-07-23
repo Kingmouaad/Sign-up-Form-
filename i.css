@@ -55,6 +55,8 @@ body {
   border-radius: 15px 0px 0px 15px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
   /* remove width: 100% and height: 100% as they're not needed in grid items */
 }
 .second {
@@ -90,6 +92,7 @@ h1 {
   top: 0;
   left: 0;
   object-fit: fill;
+  z-index: 1;
 }
 .flex {
   display: flex;
@@ -239,4 +242,19 @@ a {
   display: flex;
   gap: 5px;
   flex-direction: column;
+}
+
+#welcome {
+  position: absolute;
+  top: 70%; /* Changed from 300px for better positioning */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background-color: rgba(102, 126, 234, 0.3); /* Added transparency */
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  backdrop-filter: blur(5px); /* Optional: adds slight blur effect */
 }

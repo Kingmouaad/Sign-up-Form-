@@ -25,6 +25,19 @@ password.addEventListener("keyup", () => {
     veri.setAttribute("id", "weakpassword");
   }
 });
+const email = document.querySelector("#email");
+email.addEventListener("blur", () => {
+  const emailRegex = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if (!email.value.match(emailRegex)) {
+    email.style.borderColor = "red";
+
+    password2.setCustomValidity("email is false ");
+  } else {
+    email.style.borderColor = "green";
+
+    password2.setCustomValidity("");
+  }
+});
 
 // Fix password comparison
 password2.addEventListener("input", () => {
